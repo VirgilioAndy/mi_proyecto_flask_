@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Mi Proyecto Flask{% endblock %}
+
+{% block content %}
+    <h2>Bienvenido a la página principal</h2>
+    {% if nombre %}
+        <p>¡Hola {{ nombre }}!, gracias por visitar el sitio.</p>
+    {% else %}
+        <p>Este es un ejemplo de Flask con plantillas dinámicas.</p>
+    {% endif %}
+{% endblock %}
