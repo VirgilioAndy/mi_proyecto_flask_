@@ -9,4 +9,37 @@
     {% else %}
         <p>Este es un ejemplo de Flask con plantillas dinámicas.</p>
     {% endif %}
+
+    <hr>
+
+    <h3>Guardar datos</h3>
+    <form method="POST" action="/guardar_txt">
+        <input type="text" name="dato" placeholder="Escribe algo para TXT">
+        <button type="submit">Guardar en TXT</button>
+    </form>
+
+    <form method="POST" action="/guardar_json">
+        <input type="text" name="dato" placeholder="Escribe algo para JSON">
+        <button type="submit">Guardar en JSON</button>
+    </form>
+
+    <form method="POST" action="/guardar_csv">
+        <input type="text" name="dato" placeholder="Escribe algo para CSV">
+        <button type="submit">Guardar en CSV</button>
+    </form>
+
+    <form method="POST" action="/guardar_db">
+        <input type="text" name="nombre" placeholder="Nombre de usuario (SQLite)">
+        <button type="submit">Guardar en BD</button>
+    </form>
+
+    <hr>
+
+    <h3>Consultar datos guardados</h3>
+    <ul>
+        <li><a href="/leer_txt">Leer TXT</a></li>
+        <li><a href="/leer_json">Leer JSON</a></li>
+        <li><a href="/leer_csv">Leer CSV</a></li>
+        <li><a href="/leer_db">Leer SQLite</a></li>
+    </ul>
 {% endblock %}
